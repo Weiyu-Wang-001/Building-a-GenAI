@@ -1,0 +1,52 @@
+Deep Learning for Time Series Forecasting: Tutorial and Literature Survey
+
+KONSTANTINOS BENIDIS, SYAMA SUNDAR RANGAPURAM, and
+VALENTIN FLUNKERT, Amazon Research, Germany
+YUYANG WANG and DANIELLE MADDIX, Amazon Research, USA
+CANER TURKMEN, JAN GASTHAUS, MICHAEL BOHLKE-SCHNEIDER,
+DAVID SALINAS, LORENZO STELLA, FRANÇOIS-XAVIER AUBET, and
+LAURENT CALLOT, Amazon Research
+TIM JANUSCHOWSKI, Zalando SE, Germany
+
+
+
+Deep learning based forecasting methods have become the methods of choice in many applications of time series prediction or forecasting often outperforming other approaches. Consequently, over the last years, these
+methods are now ubiquitous in large-scale industrial forecasting applications and have consistently ranked
+among the best entries in forecasting competitions (e.g., M4 and M5). This practical success has further increased the academic interest to understand and improve deep forecasting methods. In this article we provide
+an introduction and overview of the field: We present important building blocks for deep forecasting in some
+depth; using these building blocks, we then survey the breadth of the recent deep forecasting literature.
+
+
+
+
+
+1 INTRODUCTION
+Forecasting is the task of extrapolating time series into the future. It has many important applications [54] such as forecasting the demand for items sold by retailers [15, 25, 41, 136, 156, 190],
+the flow of traffic [111, 118, 126], the demand and supply of energy [45, 117, 157, 170], or the covariance matrix, volatility and long-tail distributions in finance [12, 29, 30, 124, 197]. As such, it
+is a well-studied area (e.g., see [84] for an introduction) with its own dedicated research community. The machine learning, data science, systems, and operations research communities as well
+as application-specific research communities have also studied the problem intensively (e.g., see
+a series of recent tutorials [55–58]). In contrast to traditional forecasting applications, modern
+incarnations often exhibit large panels of related time series, all of which need to be forecasted simultaneously [91]. Although these problem characteristics make them amenable to deep learning
+or neural networks (NNs), as in many other domains over the course of history, NNs were not
+always a standard tool to tackle such problems. Indeed, their effectiveness has historically been
+regarded as mixed (e.g., [201]).
+The history of NNs starts in 1957 [152] and in 1964 for NNs in forecasting [83]. Since then, interest in NNs has oscillated, with upsurges in attention attributable to breakthroughs. The application
+of NNs in time series forecasting has followed the general popularity, typically with a lag of a few
+years. Examples of such breakthroughs include Rumelhart et al. [153, 154] that popularized the
+training of multilayer perceptrons (MLPs) using back-propagation. Significant advances were
+made subsequently such as the use of convolutional NNs (CNNs) [113], and Long Short Term
+Memory (LSTM) [81] cells that address the issue of recurrent NNs’ (RNNs) training, just to
+name a few. Despite these advances, NNs remained hard to train and difficult to work with. Methods such as Support Vector Machines (SVMs) [26] and Random Forests [79] that were developed
+in the 1990s proved to be highly effective (LeCun et al. [115] found that SVMs were as good as the
+best-designed NNs available at the time) and were supported by attractive theory. This shifted the
+interest of researchers away from NNs. Forecasting was no exception and results obtained with
+NNs were mostly mixed as reflected in a highly cited review [201]. The breakthrough that marked
+the dawn of the deep learning era came in 2006 when Hinton et al. [78] showed that it was possible to train NNs with a large number of layers (deep) if the weights are initialized appropriately.
+Accordingly, deep learning has had a sizable impact on forecasting [110] and NNs have long entered the canon of standard techniques for forecasting [84]. New models specifically designed for
+forecasting tasks have been proposed, taking advantage of deep learning to supercharge classical
+forecasting models or to develop entirely novel approaches. This recent burst of attention on deep
+forecasting models is the latest twist in a long and rich history.
+
+
+
+
